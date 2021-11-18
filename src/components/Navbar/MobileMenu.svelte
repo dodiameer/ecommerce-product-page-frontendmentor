@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from "$app/env";
   import { portal, clickOutside } from "$lib/actions";
   import { links } from "$lib/links";
   import { fly, fade } from "svelte/transition";
@@ -6,12 +7,14 @@
 
   // Toggle scroll on body when menu is open
   $: {
-    if (isOpen) {
-      document.body.classList.add("overflow-y-hidden");
-      document.body.classList.remove("overflow-y-auto");
-    } else {
-      document.body.classList.remove("overflow-y-hidden");
-      document.body.classList.add("overflow-y-auto");
+    if (browser) {
+      if (isOpen) {
+        document.body.classList.add("overflow-y-hidden");
+        document.body.classList.remove("overflow-y-auto");
+      } else {
+        document.body.classList.remove("overflow-y-hidden");
+        document.body.classList.add("overflow-y-auto");
+      }
     }
   }
 </script>
