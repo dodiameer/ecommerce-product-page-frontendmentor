@@ -32,7 +32,7 @@
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img src="/icon-previous.svg" alt="Previous image" class="w-2.5 h-4" />
       </button>
-      <div class="flex flex-row items-center overflow-hidden max-h-82">
+      <div class="flex flex-row items-center overflow-hidden h-82">
         {#key currentImage}
           <button on:click={() => (isLightboxOpen = true)}>
             <img
@@ -40,7 +40,7 @@
               out:fade={{ duration: 300, delay: 0 }}
               src={images[currentImage]}
               alt=""
-              class="w-full h-auto object-contain"
+              class="w-full h-full"
             />
           </button>
         {/key}
