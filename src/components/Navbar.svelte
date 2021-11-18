@@ -1,8 +1,16 @@
+<script lang="ts">
+  import MobileMenu from "$components/Navbar/MobileMenu.svelte";
+  let isOpen = false;
+</script>
+
 <template>
   <nav
     class="container w-full flex flex-row items-center space-x-4 py-2 border-b-gray-200 border-b-1"
   >
-    <button class="md:hidden flex items-center justify-center">
+    <button
+      class="md:hidden flex items-center justify-center"
+      on:click={() => (isOpen = !isOpen)}
+    >
       <svg
         class="fill-current h-5 w-5"
         viewBox="0 0 20 20"
@@ -12,6 +20,7 @@
         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
       </svg>
     </button>
+    <MobileMenu bind:isOpen />
     <h1 class="font-bold text-3xl">sneakers</h1>
     <!-- Pusher - ml-auto doesn't work -->
     <div class="flex-1" />

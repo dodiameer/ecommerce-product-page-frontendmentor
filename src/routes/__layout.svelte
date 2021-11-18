@@ -5,5 +5,6 @@
   if (browser) import("virtual:windi-devtools");
 </script>
 
+<div id="nav-portal" />
 <Navbar />
 <slot />
