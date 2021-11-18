@@ -1,12 +1,21 @@
 <script lang="ts">
   import { portal, clickOutside } from "$lib/actions";
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher, onMount } from "svelte";
   import { fade } from "svelte/transition";
   const dispatch = createEventDispatcher();
   export let src: string;
   export let alt: string;
   let userClass: string = "";
   export { userClass as class };
+
+  onMount(() => {
+    document.body.classList.add("overflow-y-hidden");
+    document.body.classList.remove("overflow-y-auto");
+    return () => {
+      document.body.classList.remove("overflow-y-hidden");
+      document.body.classList.add("overflow-y-auto");
+    };
+  });
 </script>
 
 <template>
