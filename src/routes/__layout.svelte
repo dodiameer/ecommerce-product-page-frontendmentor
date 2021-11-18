@@ -6,5 +6,6 @@
 </script>
 
 <div id="nav-portal" />
+<div id="lightbox-portal" />
 <Navbar />
 <slot />
