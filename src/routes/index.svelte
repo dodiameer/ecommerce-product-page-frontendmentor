@@ -16,7 +16,7 @@
 <template>
   <Carousel class="lg:hidden" {images} />
   <section
-    class="container mt-4 pb-4 lg:(grid grid-cols-2 gap-4 place-items-center)"
+    class="container mt-4 pb-4 lg:(grid grid-cols-2 gap-6 place-items-center)"
   >
     <div class="<lg:hidden">
       <ImagePicker {images} />
