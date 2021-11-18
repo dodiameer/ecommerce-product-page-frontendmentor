@@ -2,6 +2,7 @@
   import AddToCartButton from "$components/AddToCartButton.svelte";
   import Badge from "$components/Badge.svelte";
   import Carousel from "$components/Carousel.svelte";
+  import ImagePicker from "$components/ImagePicker.svelte";
   import QuantityPicker from "$components/QuantityPicker.svelte";
 
   const images = [
@@ -17,11 +18,9 @@
   <section
     class="container mt-4 pb-4 lg:(grid grid-cols-2 gap-4 place-items-center)"
   >
-    <img
-      src={images[0]}
-      alt=""
-      class="<lg:hidden max-h-[calc(100vh-8rem)] rounded-lg"
-    />
+    <div class="<lg:hidden">
+      <ImagePicker {images} />
+    </div>
     <div>
       <p class="text-primary text-sm uppercase font-bold">Sneaker Company</p>
       <p class="text-3xl font-bold capitalize mt-1">
