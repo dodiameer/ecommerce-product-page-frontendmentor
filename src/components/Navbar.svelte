@@ -21,7 +21,7 @@
       </svg>
     </button>
     <MobileMenu bind:isOpen />
-    <h1 class="font-bold text-3xl">sneakers</h1>
+    <a class="font-bold text-3xl" href="/">sneakers</a>
     <!-- Pusher - ml-auto doesn't work -->
     <div class="flex-1" />
     <!-- Right section -->
