@@ -20,7 +20,7 @@
   {#if isOpen}
     <div
       transition:fade={{ duration: 200 }}
-      class="fixed inset-0 w-full h-full bg-black/75 z-10"
+      class="fixed inset-0 w-full h-full bg-black/75 z-20"
     >
       <!-- Backdrop -->
     </div>
@@ -28,7 +28,7 @@
       use:portal={"#nav-portal"}
       use:clickOutside={() => (isOpen = false)}
       transition:fly={{ duration: 400, x: -200 }}
-      class="fixed top-0 left-0 w-[70vw] px-4 py-4 z-20 bg-white h-screen shadow-2xl"
+      class="fixed top-0 left-0 w-[70vw] px-4 py-4 z-30 bg-white h-screen shadow-2xl"
     >
       <button on:click={() => (isOpen = false)}>
         <img class="w-4.5 h-4.5" src="/icon-close.svg" alt="Close menu" />
